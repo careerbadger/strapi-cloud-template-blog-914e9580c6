@@ -549,7 +549,16 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    content: Schema.Attribute.Blocks;
+    blocks: Schema.Attribute.DynamicZone<
+      [
+        'shared.rich-text',
+        'shared.seo',
+        'shared.slider',
+        'shared.quote',
+        'shared.media',
+        'shared.joblist',
+      ]
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -560,9 +569,7 @@ export interface ApiLandingPageLandingPage extends Struct.CollectionTypeSchema {
       'api::landing-page.landing-page'
     > &
       Schema.Attribute.Private;
-    location: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
-    search: Schema.Attribute.String;
     slug: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

@@ -17,17 +17,19 @@
     "title": {
       "type": "string"
     },
-    "location": {
-      "type": "string"
-    },
-    "search": {
-      "type": "string"
-    },
     "description": {
       "type": "string"
     },
-    "content": {
-      "type": "blocks"
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.rich-text",
+        "shared.seo",
+        "shared.slider",
+        "shared.quote",
+        "shared.media",
+        "shared.joblist"
+      ]
     }
   }
 }

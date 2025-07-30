@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_joblists",
+  "info": {
+    "displayName": "joblist",
+    "icon": "search"
+  },
+  "options": {},
+  "attributes": {
+    "search": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
